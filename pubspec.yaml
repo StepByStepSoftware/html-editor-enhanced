@@ -11,8 +11,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # webview plugin
-  flutter_inappwebview: ^6.0.0
+  # webview plugin from our fork until proguard issue fixed
+  flutter_inappwebview: 
+    git:
+      url: https://github.com/StepByStepSoftware/flutter_inappwebview.git
+      path: flutter_inappwebview
+      ref: fix-proguard-rules
+      
   # plugin to get webview's visible fraction for keyboard height adjustment
   visibility_detector: ^0.4.0+2
   # plugin to get when the keyboard is hidden via back (Android)
